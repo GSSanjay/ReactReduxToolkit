@@ -6,7 +6,7 @@ import { useEffect } from "react";
 
 function App() {
   const dispatch = useDispatch();
-  const count = useSelector((state) => state.counter.value);
+  const { value } = useSelector((state) => state.counter);
   const { entities, loading } = useSelector((state) => state.posts);
 
   useEffect(() => {
@@ -17,7 +17,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>{count}</h1>
+      <h1>{value}</h1>
       <button onClick={() => dispatch(increment())}>+</button>
       <button onClick={() => dispatch(decrement())}>-</button>
       <h2>Blog Posts</h2>
