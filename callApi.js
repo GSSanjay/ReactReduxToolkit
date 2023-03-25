@@ -1,4 +1,3 @@
-//https://stackoverflow.com/questions/60290580/how-do-i-make-an-api-call-using-createslice
 
 const usersSlice = createSlice({
     name: "users",
